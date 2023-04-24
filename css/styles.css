@@ -599,22 +599,6 @@ a {
 }
 /*====================================Portfolio=============================*/
 
-/*.button {
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.04em;
-color: #FFFFFF;
-background-color: #4D5AE5;
-
-}*/
-
-/*CORRECTION*/
 /*-------------------------------------------------------------------------*/
 .portfolio-section {
   padding: 96px 120px;
@@ -691,7 +675,7 @@ background-color: #4D5AE5;
 
   transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-text {
@@ -742,9 +726,10 @@ background-color: #4D5AE5;
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
 }
-
+ 
 .modal {
   position: absolute;
   top: 50%;
@@ -760,7 +745,7 @@ background-color: #4D5AE5;
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition-property: transform;
+  transition-property: transform, opacity;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
@@ -789,4 +774,19 @@ background-color: #4D5AE5;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+@keyframes changeColor {
+  
+  0% {
+    background-color: #31d0aa;
+  }
+  50% {
+  background-color: #404bbf;
+
+  }
+  100% {
+  background-color: #afb1b8;
+}
 }
