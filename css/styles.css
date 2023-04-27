@@ -565,7 +565,7 @@ svg {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
+  
   align-items: baseline;
 }
 .footer-text-right {
@@ -593,6 +593,9 @@ svg {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+
 .social-media-list-footer {
   display: flex;
   justify-content: center;
@@ -605,30 +608,35 @@ svg {
   background-color: #31d0aa;
 }
 
-/*---------------------Subscribe form------------------------*/
-.subscribe-box{
-  display: block;
+.footer-right-block {
+  margin-right: 120px;
 }
+.team-icon-cont {
+  margin-right: 80px;
+}
+
+/*---------------------Subscribe form------------------------*/
+
 .subscribe-form {
   display: flex;
   gap: 24px;
-  align-items: center;
+  align-items:end;
+  
 }
 .subscribe-title {
-  
   font-family: "Roboto";
-  
+
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
 
-  margin-bottom: 16px;
+  
 
   letter-spacing: 0.02em;
 
   color: #ffffff;
 }
-.subs-title{
+.subs-title {
   display: block;
   margin-bottom: 16px;
 }
@@ -641,7 +649,7 @@ svg {
   background: #2e2f42;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding-left: 56px;
+  padding-left: 16px;
 
   color: #ffffff;
 }
@@ -665,12 +673,11 @@ svg {
   color: #ffffff;
 }
 .subscribe-btn {
-  
   height: 40px;
   width: 165px;
 
   border-radius: 4px;
-  padding: 8px 24px 8px 24px;
+  padding: 8px 64px 8px 24px;
 
   background: #4d5ae5;
   border-radius: 4px;
@@ -685,16 +692,23 @@ svg {
   color: #ffffff;
 
   border: none;
-}
 
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: #404bbf;
+}
 .subs-btn-box {
   position: relative;
 }
 .subscribe-icon {
   position: absolute;
-  top: 0px;
-  left: 0px;
- 
+  top: 10px;
+  right: 24px;
+  
 }
 
 /*====================================Portfolio=============================*/
@@ -925,8 +939,8 @@ form {
   color: #8e8f99;
 }
 textarea {
-  
   width: 100%;
+  height: 120px;
   resize: none;
   padding: 8px 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -936,21 +950,21 @@ textarea {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 textarea::placeholder {
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
 
-letter-spacing: 0.04em;
-color: rgba(46, 47, 66, 0.4);
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 textarea:focus {
   border: 1px solid #4d5ae5;
   border-radius: 4px;
   outline: none;
 }
-.modal-form-message{
+.modal-form-message {
   resize: none;
 }
 .modal-form-agreement {
@@ -987,7 +1001,7 @@ textarea:focus {
 }
 
 .modal-form-agreement-box {
-  margin-bottom: 24px;
+  visibility: hidden;
 }
 
 .btn-modal {
@@ -1010,6 +1024,32 @@ textarea:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+}
+/*Castom Chackbox*/
+.modal-form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.modal-form-agreement::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.modal-form-agreement-box:checked + .modal-form-agreement::before {
+  background-color: #4d5ae5;
+  background-image: url(../images/Vector-check-box.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-form-agreement-box:focus + .modal-form-agreement::before {
 }
 
 @keyframes modalWindow {

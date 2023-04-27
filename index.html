@@ -380,7 +380,7 @@
     <!--=======================Footer=================-->
     <footer class="footer">
       <div class="container footer-container">
-        <div>
+        <div class="footer-right-block">
           <a href="./index.html" class="logo link footer-logo">
             WEB<span class="footer-studio">Studio</span>
           </a>
@@ -425,9 +425,10 @@
         </div>
 
         <form class="subscribe-form">
-          <label class="subscribe-title"><span class="subs-title">Subscribe</span>
+          <label class="subscribe-title"
+            ><span class="subs-title">Subscribe</span>
 
-            <span class="subscribe-box">
+            
               <input
                 class="subscribe-input"
                 id="sub-email"
@@ -435,11 +436,11 @@
                 name="user-email"
                 required
                 pattern=""
+                placeholder="E-mail"
               />
-              <p class="subscribe-input-email">E-mail</p>
-            </span>
+             
           </label>
-          
+
           <div class="subs-btn-box">
             <button class="subscribe-btn" type="submit">Subscribe</button>
             <svg class="subscribe-icon" width="24" height="20">
@@ -516,22 +517,26 @@
               class="modal-form-message"
               id="user_message"
               rows="5"
-              placeholder="Text input"
+              placeholder="Enter message"
             >
             </textarea>
           </div>
-
-          <label class="modal-form-agreement">
+          <!--castom checkbox-->
+         
             <input
-              class="modal-form-agreement-box"
-              type="checkbox"
-              name="user_agreement"
-            />
+            class="modal-form-agreement-box"
+            id="user-policy"
+            type="checkbox"
+            name="user_agreement"
+          />
+          <label class="modal-form-agreement" for="user-policy">
             <span class="modal-form-agreement-text">
               I accept the terms and conditions of the
               <a class="modal-form-agreement-link" href="">Privacy Policy</a>
             </span>
           </label>
+          
+          
 
           <button class="btn-modal" type="submit">Send</button>
         </form>
